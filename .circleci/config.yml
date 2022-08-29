@@ -1,15 +1,12 @@
 version: 2.1
 
 jobs:
-  build:
+  run_browserstack:
     docker:
       - image: cimg/node:16.17.0
     steps:
       - checkout
       - run: node --version
-      - run: # print the name of the branch we're on
-          name: "Current PATH"
-          command: echo "${PWD}"
       - run: 
           name: Prerequisites
           command: npm install browserstack-cypress-cli
@@ -19,7 +16,10 @@ jobs:
       - run:
           name: Send tests to Browserstack
           command: npm run browserstack
-      - run: # print the name of the branch we're on
+      - run:
           name: "List files"
           command: ls
-      
+workflows:
+  build_tests:
+    jobs:
+      - run_browserstack   
