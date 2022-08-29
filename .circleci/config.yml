@@ -16,6 +16,9 @@ jobs:
       - run: 
           name: Install dependencies
           command: npm install
+      - run:
+          name: Send tests to Browserstack
+          command: npm run browserstack
       - run: # print the name of the branch we're on
           name: "List files"
           command: ls
