@@ -14,8 +14,11 @@ jobs:
           name: Install dependencies
           command: npm install
       - run:
+          name: Check env variables
+          command: npm run check-env
+      - run:
           name: Send tests to Browserstack
-          command: browserstack-cypress run  --record --record-key "${CYPRESS_RECORD_KEY}" --projectId "${CYPRESS_PROJECT_ID}"
+          command: npm run browserstack
       - run:
           name: "List files"
           command: ls
