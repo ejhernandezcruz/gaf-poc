@@ -10,3 +10,6 @@ jobs:
       - run: # print the name of the branch we're on
           name: "What branch am I on?"
           command: echo "${PWD}"
+      - run: # print the name of the branch we're on
+          name: "List files"
+          command: ls
