@@ -1,12 +1,9 @@
 version: 2.1
-orbs:
-  cypress: cypress-io/cypress@1
-  
-workflows:
+
+jobs:
   build:
-    jobs:
-      - cypress/install:
-          pre-steps:
-            - run: 'npm install -g browserstack-cypress-cli'
-      - cypress/run:
-          command: browserstack-cypress run
+    docker:
+      - image: cimg/node:16.17.0
+    steps:
+      - checkout
+      - run: node --version
