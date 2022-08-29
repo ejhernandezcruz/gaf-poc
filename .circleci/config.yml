@@ -7,3 +7,6 @@ jobs:
     steps:
       - checkout
       - run: node --version
+      - run: # print the name of the branch we're on
+          name: "What branch am I on?"
+          command: echo "${PWD}"
