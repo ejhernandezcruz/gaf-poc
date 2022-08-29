@@ -14,14 +14,13 @@ jobs:
           name: Install dependencies
           command: npm install
       - run:
-          name: Check env variables
-          command: echo ${CYPRESS_RECORD_KEY}
-      - run:
           name: Send tests to Browserstack
           command: npm run browserstack
       - run:
           name: "List files"
           command: ls
+      - store_test_artifact:
+          path: results
 workflows:
   build_tests:
     jobs:

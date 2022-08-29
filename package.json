@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run --record --key fcd9196c-1ecc-414d-89f4-a85f3d7c793d",
-    "browserstack": "browserstack-cypress run --record --record-key $CYPRESS_RECORD_KEY --projectId $CYPRESS_PROJECT_ID",
+    "browserstack": "browserstack-cypress run --record --record-key fcd9196c-1ecc-414d-89f4-a85f3d7c793d --projectId f8nz46",
     "check-env": "node -e 'console.log(process.env)' | grep npm"
   },
   "keywords": [],

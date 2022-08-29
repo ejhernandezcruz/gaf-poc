@@ -6,20 +6,13 @@
             "versions": [
                 "latest"
             ]
-        },
-        {
-            "browser": "edge",
-            "os": "OS X Catalina",
-            "versions": [
-                "latest"
-            ]
         }
     ],
     "run_settings": {
         "cypress_config_file": "./cypress.config.js",
-        "cypress_version": "10",
+        "cypress_version": "10.3.0",
         "project_name": "GAF-POC",
-        "build_name": "Build no: 1",
+        "build_name": "POC",
         "parallels": 2
     },
     "connection_settings": {
