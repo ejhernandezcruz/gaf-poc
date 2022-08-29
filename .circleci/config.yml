@@ -15,7 +15,7 @@ jobs:
           command: npm install
       - run:
           name: Send tests to Browserstack
-          command: npm run browserstack
+          command: browserstack-cypress run  --record --record-key "${CYPRESS_RECORD_KEY}" --projectId "${CYPRESS_PROJECT_ID}"
       - run:
           name: "List files"
           command: ls

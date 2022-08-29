@@ -1,19 +1,8 @@
 {
-    "auth": {
-        "username": "edwardhernandez_wnLXUY",
-        "access_key": "gZF19kqgoR1e23k3BqJG"
-    },
     "browsers": [
         {
             "browser": "chrome",
             "os": "Windows 10",
-            "versions": [
-                "latest"
-            ]
-        },
-        {
-            "browser": "firefox",
-            "os": "OS X Mojave",
             "versions": [
                 "latest"
             ]
@@ -31,10 +20,7 @@
         "cypress_version": "10",
         "project_name": "GAF-POC",
         "build_name": "Build no: 1",
-        "parallels": 3,
-        "record": true,
-        "record-key": "fcd9196c-1ecc-414d-89f4-a85f3d7c793d",
-        "projectId": "f8nz46"
+        "parallels": 2
     },
     "connection_settings": {
         "local": false
