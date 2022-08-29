@@ -15,7 +15,7 @@ jobs:
           command: npm install
       - run:
           name: Check env variables
-          command: npm run check-env
+          command: echo ${CYPRESS_RECORD_KEY}
       - run:
           name: Send tests to Browserstack
           command: npm run browserstack
