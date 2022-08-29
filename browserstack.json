@@ -13,7 +13,10 @@
         "cypress_version": "10.3.0",
         "project_name": "GAF-POC",
         "build_name": "POC",
-        "parallels": 2
+        "parallels": 2,
+        "record": true,
+        "record-key": "fcd9196c-1ecc-414d-89f4-a85f3d7c793d",
+        "projectId": "f8nz46"
     },
     "connection_settings": {
         "local": false
