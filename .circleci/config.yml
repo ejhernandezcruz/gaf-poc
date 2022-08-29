@@ -19,7 +19,7 @@ jobs:
       - run:
           name: "List files"
           command: ls
-      - store_test_artifact:
+      - store_artifacts:
           path: results
 workflows:
   build_tests:
