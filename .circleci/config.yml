@@ -13,6 +13,8 @@ jobs:
     docker:
       - image: cypress/base:16.14.2-slim
     steps:
+      - checkout
+      - run: npm install
       - run:
           name: "Test env var"
           command: npm run trigger
