@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "browserstack-cypress-cli": "^1.18.0",
     "cypress": "^10.6.0"
   }
 }
