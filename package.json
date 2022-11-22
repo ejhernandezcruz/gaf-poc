@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run",
-    "trigger": "node ./scripts/test.js $SPEC"
+    "trigger": "node ./scripts/test.js"
   },
   "keywords": [],
   "author": "",
