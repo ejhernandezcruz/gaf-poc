@@ -1,0 +1,35 @@
+version: 2.1
+
+parameters:
+  run_integration_tests:
+    type: boolean
+    default: false
+  spec:
+    type: string
+    default: ""
+
+jobs:
+  run_browserstack:
+    docker:
+      - image: cypress/base:16.14.2-slim
+    steps:
+      - run:
+          name: "Test env var"
+          command: npm run trigger
+          environment:
+            SPEC: <<pipeline.parameters.spec>>
+      - when:
+         condition: <<pipeline.parameters.spec>>
+         steps:
+           - run: echo '1 Feature File'
+      - unless:
+          condition: <<pipeline.parameters.spec>>
+          steps:
+           - run: echo 'Run All Tests'   
+      
+
+
+workflows:
+  build_tests:
+    jobs:
+      - run_browserstack   

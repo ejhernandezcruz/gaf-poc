@@ -1,10 +1,12 @@
 {
   "name": "gaf-poc",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run --record --key fcd9196c-1ecc-414d-89f4-a85f3d7c793d",
+    "test": "npx cypress run",
+    "trigger": "node ./scripts/test.js",
     "browserstack": "browserstack-cypress run",
     "check-env": "node -e 'console.log(process.env)' | grep npm"
   },
