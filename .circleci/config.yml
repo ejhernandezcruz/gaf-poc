@@ -15,15 +15,16 @@ jobs:
     steps:
       - checkout
       - run: npm install
-      - run:
-          name: "Test env var"
-          command: npm run trigger
-          environment:
-            SPEC: <<pipeline.parameters.spec>>
+
       - when:
          condition: <<pipeline.parameters.spec>>
          steps:
            - run: echo '1 Feature File'
+           - run:
+              name: "Test env var"
+              command: npm run trigger
+              environment:
+                SPEC: <<pipeline.parameters.spec>>
       - unless:
           condition: <<pipeline.parameters.spec>>
           steps:
